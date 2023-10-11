@@ -4,7 +4,6 @@ namespace Adminetic\BusinessHour\Http\Livewire\Admin;
 
 use Carbon\Carbon;
 use Livewire\Component;
-use Spatie\OpeningHours\OpeningHours;
 use Pratiksh\Adminetic\Models\Admin\Data;
 
 class BusinessHourExceptions extends Component
@@ -19,7 +18,7 @@ class BusinessHourExceptions extends Component
 
     protected $listeners = ['initialize_business_hour_exceptions' => 'initializeBusinessHourExceptions'];
 
-     protected $rules = [
+    protected $rules = [
         'exceptions.*.date' => 'required|date|date_format:Y-m-d',
         'exceptions.*.intervals.*.start.hour' => 'required|numeric|max:23',
         'exceptions.*.intervals.*.start.minute' => 'required|numeric|max:60',
@@ -41,11 +40,11 @@ class BusinessHourExceptions extends Component
     public function mount()
     {
         $this->data = Data::firstOrCreate([
-            'name' => 'business_hour'
+            'name' => 'business_hour',
         ], [
-            'content' => config('business_hour.default', null)
+            'content' => config('business_hour.default', null),
         ]);
-        $this->business_hour = $this->data->content ??  config('business_hour.default', null);
+        $this->business_hour = $this->data->content ?? config('business_hour.default', null);
         $this->exceptions = $this->business_hour['exceptions'] ?? null;
     }
 
@@ -63,39 +62,39 @@ class BusinessHourExceptions extends Component
                 [
                     'start' => [
                         'hour' => '09',
-                        'minute' => '00'
+                        'minute' => '00',
                     ],
                     'end' => [
                         'hour' => '17',
-                        'minute' => '00'
+                        'minute' => '00',
                     ],
-                ]
+                ],
             ],
         ];
-           $this->emit('business_hour_exceptions_success', 'Exception added.');
+        $this->emit('business_hour_exceptions_success', 'Exception added.');
     }
 
     public function remove_exception($day)
     {
-            $exceptions = $this->exceptions;
+        $exceptions = $this->exceptions;
         unset($exceptions[$day]);
         $this->exceptions = $exceptions;
-                   $this->emit('business_hour_exceptions_danger', 'Exception removed.');
+        $this->emit('business_hour_exceptions_danger', 'Exception removed.');
     }
 
     public function add_exception_date_interval($day)
     {
-         $this->exceptions[$day]['intervals'][] = [
+        $this->exceptions[$day]['intervals'][] = [
             'start' => [
                 'hour' => '09',
-                'minute' => '00'
+                'minute' => '00',
             ],
             'end' => [
                 'hour' => '17',
-                'minute' => '00'
+                'minute' => '00',
             ],
         ];
-                   $this->emit('business_hour_exceptions_success', 'Interval for exception added.');
+        $this->emit('business_hour_exceptions_success', 'Interval for exception added.');
     }
 
     public function remove_exception_date_interval($day, $index)
@@ -106,15 +105,15 @@ class BusinessHourExceptions extends Component
         $this->emit('business_hour_exceptions_danger', 'Interval for exception removed.');
     }
 
-      public function save()
+    public function save()
     {
         $this->validate();
         $content = $this->data->content;
         $content['exceptions'] = $this->exceptions;
         $this->data->update([
-            'content' => $content
+            'content' => $content,
         ]);
-           $this->emit('business_hour_exceptions_success', 'Exceptions saved.');
+        $this->emit('business_hour_exceptions_success', 'Exceptions saved.');
     }
 
     public function render()

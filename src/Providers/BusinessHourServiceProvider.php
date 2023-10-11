@@ -2,10 +2,10 @@
 
 namespace Adminetic\BusinessHour\Providers;
 
-use Livewire\Livewire;
-use Illuminate\Support\ServiceProvider;
-use Adminetic\BusinessHour\Http\Livewire\Admin\BusinessHourPanel;
 use Adminetic\BusinessHour\Http\Livewire\Admin\BusinessHourExceptions;
+use Adminetic\BusinessHour\Http\Livewire\Admin\BusinessHourPanel;
+use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
 
 class BusinessHourServiceProvider extends ServiceProvider
 {
@@ -29,7 +29,7 @@ class BusinessHourServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/business_hour.php', 'business_hour');
+        $this->mergeConfigFrom(__DIR__.'/../../config/business_hour.php', 'business_hour');
     }
 
     /**
@@ -39,7 +39,7 @@ class BusinessHourServiceProvider extends ServiceProvider
      */
     protected function registerResource()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'business_hour'); // Loading Views Files
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'business_hour'); // Loading Views Files
     }
 
     /**
@@ -51,7 +51,7 @@ class BusinessHourServiceProvider extends ServiceProvider
     {
         // Publish Config File
         $this->publishes([
-            __DIR__ . '/../../config/business_hour.php' => config_path('business_hour.php'),
+            __DIR__.'/../../config/business_hour.php' => config_path('business_hour.php'),
         ], 'business-hour-config');
     }
 

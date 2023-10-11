@@ -3,7 +3,6 @@
 namespace Adminetic\BusinessHour\Http\Livewire\Admin;
 
 use Livewire\Component;
-use Spatie\OpeningHours\OpeningHours;
 use Pratiksh\Adminetic\Models\Admin\Data;
 
 class BusinessHourPanel extends Component
@@ -31,16 +30,14 @@ class BusinessHourPanel extends Component
         'days.*.intervals.*.end.minute.max' => 'Minute must be max upto 60',
     ];
 
-
-
     public function mount()
     {
         $this->data = Data::firstOrCreate([
-            'name' => 'business_hour'
+            'name' => 'business_hour',
         ], [
-            'content' => config('business_hour.default', null)
+            'content' => config('business_hour.default', null),
         ]);
-        $this->business_hour = $this->data->content ??  config('business_hour.default', null);
+        $this->business_hour = $this->data->content ?? config('business_hour.default', null);
         $this->days = $this->business_hour['days'] ?? null;
     }
 
@@ -49,14 +46,14 @@ class BusinessHourPanel extends Component
         $this->days[$day]['intervals'][] = [
             'start' => [
                 'hour' => '09',
-                'minute' => '00'
+                'minute' => '00',
             ],
             'end' => [
                 'hour' => '17',
-                'minute' => '00'
+                'minute' => '00',
             ],
         ];
-        $this->emit('business_hour_panel_success', 'Interval added for ' . strtoupper($this->days[$day]['name']));
+        $this->emit('business_hour_panel_success', 'Interval added for '.strtoupper($this->days[$day]['name']));
     }
 
     public function remove_interval($day, $index)
@@ -64,7 +61,7 @@ class BusinessHourPanel extends Component
         $days = $this->days;
         unset($days[$day]['intervals'][$index]);
         $this->days = $days;
-        $this->emit('business_hour_panel_danger', 'Interval removed for ' . strtoupper($this->days[$day]['name']));
+        $this->emit('business_hour_panel_danger', 'Interval removed for '.strtoupper($this->days[$day]['name']));
     }
 
     public function save()
@@ -73,7 +70,7 @@ class BusinessHourPanel extends Component
         $content = $this->data->content;
         $content['days'] = $this->days;
         $this->data->update([
-            'content' => $content
+            'content' => $content,
         ]);
         $this->emit('business_hour_panel_success', 'Business hour saved successfully');
     }
