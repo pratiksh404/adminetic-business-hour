@@ -5,7 +5,7 @@ return [
     |--------------------------------------------------------------------------
     | Default Week Business Time
     |--------------------------------------------------------------------------
-    | 
+    |
     */
     'default' => [
         'days' => [
@@ -21,15 +21,15 @@ return [
                     [
                         'start' => [
                             'hour' => '09',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
                         'end' => [
                             'hour' => '17',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
-                    ]
+                    ],
                 ],
-                'data' => null
+                'data' => null,
             ],
             [
                 'name' =>  'tuesday',
@@ -38,15 +38,15 @@ return [
                     [
                         'start' => [
                             'hour' => '09',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
                         'end' => [
                             'hour' => '17',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
-                    ]
+                    ],
                 ],
-                'data' => null
+                'data' => null,
             ],
             [
                 'name' =>  'wednesday',
@@ -55,15 +55,15 @@ return [
                     [
                         'start' => [
                             'hour' => '09',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
                         'end' => [
                             'hour' => '17',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
-                    ]
+                    ],
                 ],
-                'data' => null
+                'data' => null,
             ],
             [
                 'name' =>  'thursday',
@@ -72,15 +72,15 @@ return [
                     [
                         'start' => [
                             'hour' => '09',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
                         'end' => [
                             'hour' => '17',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
-                    ]
+                    ],
                 ],
-                'data' => null
+                'data' => null,
             ],
             [
                 'name' =>  'friday',
@@ -89,21 +89,21 @@ return [
                     [
                         'start' => [
                             'hour' => '09',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
                         'end' => [
                             'hour' => '17',
-                            'minute' => '00'
+                            'minute' => '00',
                         ],
-                    ]
+                    ],
                 ],
-                'data' => null
+                'data' => null,
             ],
             [
                 'name' =>  'saturday',
                 'open' => false,
-                'intervals' => []
+                'intervals' => [],
             ],
-        ]
-    ]
+        ],
+    ],
 ];
