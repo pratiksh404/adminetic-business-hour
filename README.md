@@ -25,6 +25,15 @@ composer require adminetic/business-hour
 @livewire('business-hour-panel')
 ```
 
+## Use
+```
+$business_hour = Spatie\OpeningHours\OpeningHours::create(business_hour());
+```
+
+```bash
+@livewire('business-hour-panel')
+```
+
 
 ### Testing
 
