@@ -56,6 +56,7 @@ class BusinessHourPanel extends Component
                 'minute' => '00'
             ],
         ];
+        $this->emit('business_hour_panel_success', 'Interval added for ' . strtoupper($this->days[$day]['name']));
     }
 
     public function remove_interval($day, $index)
@@ -63,6 +64,7 @@ class BusinessHourPanel extends Component
         $days = $this->days;
         unset($days[$day]['intervals'][$index]);
         $this->days = $days;
+        $this->emit('business_hour_panel_danger', 'Interval removed for ' . strtoupper($this->days[$day]['name']));
     }
 
     public function save()
@@ -73,6 +75,7 @@ class BusinessHourPanel extends Component
         $this->data->update([
             'content' => $content
         ]);
+        $this->emit('business_hour_panel_success', 'Business hour saved successfully');
     }
 
     public function render()

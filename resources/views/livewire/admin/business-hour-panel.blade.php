@@ -134,4 +134,7 @@
             </tbody>
         </table>
     </div>
+    @push('livewire_third_party')
+        @include('business_hour::layouts.business_hour_panel_scripts')
+    @endpush
 </div>

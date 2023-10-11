@@ -72,6 +72,7 @@ class BusinessHourExceptions extends Component
                 ]
             ],
         ];
+           $this->emit('business_hour_exceptions_success', 'Exception added.');
     }
 
     public function remove_exception($day)
@@ -79,6 +80,7 @@ class BusinessHourExceptions extends Component
             $exceptions = $this->exceptions;
         unset($exceptions[$day]);
         $this->exceptions = $exceptions;
+                   $this->emit('business_hour_exceptions_danger', 'Exception removed.');
     }
 
     public function add_exception_date_interval($day)
@@ -93,6 +95,7 @@ class BusinessHourExceptions extends Component
                 'minute' => '00'
             ],
         ];
+                   $this->emit('business_hour_exceptions_success', 'Interval for exception added.');
     }
 
     public function remove_exception_date_interval($day, $index)
@@ -100,6 +103,7 @@ class BusinessHourExceptions extends Component
         $exceptions = $this->exceptions;
         unset($exceptions[$day]['intervals'][$index]);
         $this->exceptions = $exceptions;
+        $this->emit('business_hour_exceptions_danger', 'Interval for exception removed.');
     }
 
       public function save()
@@ -110,6 +114,7 @@ class BusinessHourExceptions extends Component
         $this->data->update([
             'content' => $content
         ]);
+           $this->emit('business_hour_exceptions_success', 'Exceptions saved.');
     }
 
     public function render()
