@@ -1,6 +1,6 @@
-# business-hour Module for Adminetic Admin Panel
+# Business Hour Module for Adminetic Admin Panel
 
-![Adminetic Business Hour Module](https://github.com/pratiksh404/adminetic-business-hour/blob/main/screenshots/banner.png)
+![Adminetic Business Hour Module](https://github.com/pratiksh404/adminetic-business-hour/blob/main/screenshots/banner.jpg)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/adminetic/business-hour.svg?style=flat-square)](https://packagist.org/packages/adminetic/business-hour)
 
