@@ -1,10 +1,10 @@
-# Website Module for Adminetic Admin Panel
+# business-hour Module for Adminetic Admin Panel
 
-![Adminetic Website Module](https://github.com/pratiksh404/adminetic-website/blob/main/screenshots/banner.png)
+![Adminetic Business Hour Module](https://github.com/pratiksh404/adminetic-business-hour/blob/main/screenshots/banner.png)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/adminetic/website.svg?style=flat-square)](https://packagist.org/packages/adminetic/website)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/adminetic/business-hour.svg?style=flat-square)](https://packagist.org/packages/adminetic/business-hour)
 
-[![Stars](https://img.shields.io/github/stars/pratiksh404/adminetic-website)](https://github.com/pratiksh404/adminetic-website/stargazers) [![Downloads](https://img.shields.io/packagist/dt/adminetic/website.svg?style=flat-square)](https://packagist.org/packages/adminetic/website) [![StyleCI](https://github.styleci.io/repos/385822775/shield?branch=main)](https://github.styleci.io/repos/385822775?branch=main) [![License](https://img.shields.io/github/license/pratiksh404/adminetic-website)](//packagist.org/packages/adminetic/website)
+[![Stars](https://img.shields.io/github/stars/pratiksh404/adminetic-business-hour)](https://github.com/pratiksh404/adminetic-business-hour/stargazers) [![Downloads](https://img.shields.io/packagist/dt/adminetic/business-hour.svg?style=flat-square)](https://packagist.org/packages/adminetic/business-hour) [![StyleCI](https://github.styleci.io/repos/385822775/shield?branch=main)](https://github.styleci.io/repos/385822775?branch=main) [![License](https://img.shields.io/github/license/pratiksh404/adminetic-business-hour)](//packagist.org/packages/adminetic/business-hour)
 
 Business hour module for Adminetic Admin Panel
 
@@ -56,6 +56,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Screenshots
 
-![Business Hour Panel](https://github.com/pratiksh404/adminetic-website/blob/main/screenshots/1.jpg)
+![Business Hour Panel](https://github.com/pratiksh404/adminetic-business-hour/blob/main/screenshots/1.jpg)
 
 
