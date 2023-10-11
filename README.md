@@ -56,6 +56,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Screenshots
 
-![Business Hour Panel](https://github.com/pratiksh404/adminetic-business-hour/blob/main/screenshots/1.jpg)
+![Business Hour Panel](https://github.com/pratiksh404/adminetic-business-hour/blob/main/screenshots/panel.jpg)
 
 
